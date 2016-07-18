@@ -1,0 +1,728 @@
+notify: &notify
+  - stdout: ~
+  - telegram: -105669580
+
+checkers:
+  - name: SISPRENATAL
+    url: http://sisprenatal.saude.gov.br/login.jsf
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: SISPRENATAL
+    min_failures: 3 
+    
+  - name: SINAN
+    url: http://sinan.saude.gov.br/sinan/login/login.jsf
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: SINAN
+    min_failures: 3 
+
+  - name: SAIPS
+    url: http://saips.saude.gov.br/
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: SAIPS
+    min_failures: 3 
+    
+  - name: SARGSUS
+    url: http://sargsus.saude.gov.br/sargsus/login!carregarPagina.action
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br      
+    status: 200
+    body: Gestores SUS
+    min_failures: 3 
+
+  - name: SISCAN
+    url: http://siscan.saude.gov.br/login.jsf
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: SISCAN
+    min_failures: 3
+
+  - name: HEMOVIDA
+    url: http://hemovida.saude.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: HEMOVIDA
+    min_failures: 3
+
+  - name: HÓRUS
+    url: http://horus.saude.gov.br/horus/css/geral.css
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: sistema
+    min_failures: 3
+
+  - name: Mais Médicos
+    url: http://maismedicos.saude.gov.br/new/web/app.php/maismedicos/rms
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: Mais Médicos
+    min_failures: 3 
+
+  - name: GSM NAT
+    url: http://aplicacao.saude.gov.br/gsm-nat/login.html?0
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: GSM NAT
+    min_failures: 3 
+
+  - name: SCAWEB
+    url: http://scaweb.saude.gov.br:9443/scaweb/
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: SCAWEB
+    min_failures: 3 
+
+  - name: SISAGUA
+    url: http://sisagua.saude.gov.br/sisagua/login.jsf
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: SISAGUA
+    min_failures: 3 
+
+  - name: SNT
+    url: https://snt.saude.gov.br/consulta/ConsultaReceptorPA.aspx
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: Consulta à Situação no Cadastro Técnico de Pâncreas
+    min_failures: 3 
+
+  - name: PERIODICOS
+    url: http://aplicacao.periodicos.saude.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: PERIODICOS
+    min_failures: 3 
+
+  - name: SCPA
+    url: http://aplicacao.saude.gov.br/datasus-scpa-ws/ScpaServiceImpl?wsdl
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: ScpaService
+    min_failures: 3 
+
+  - name: SISCOOP
+    url: https://siscoop.saude.gov.br/siscoop/documentacao_siscoop.pdf
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: SISCOOP
+    min_failures: 3 
+
+  - name: SISPACTO
+    url: http://aplicacao.saude.gov.br/sispacto/faces/login.jsf
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: SISPACTO
+    min_failures: 3 
+
+  - name: PLATAFORMA BRASIL
+    url: http://aplicacao.saude.gov.br/plataformabrasil/login.jsf
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+  #  body: PLATAFORMA BRASIL
+    min_failures: 3 
+
+  - name: SIGESP PORTAL
+    url: http://sigesp.saude.gov.br/portal\#/login
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: SIGESP
+    min_failures: 3 
+
+  - name: SIGESP SAD
+    url: http://sigesp-sad.saude.gov.br/release-notes
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: SAD
+    min_failures: 3 
+
+  - name: SIASI
+    url: http://aplicacao.saude.gov.br/siasi/login.jsf
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: SIASI
+    min_failures: 3 
+
+  - name: FARMÁCIA POPULAR
+    url: https://200.214.130.55:9443/farmaciapopular/services/ServicoSolicitacaoWS?wsdl
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+ #   body: ???
+    min_failures: 3 
+
+ # - name: SNA RH (Redireciona pro SNA Autentica) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3
+ #   
+
+  - name: SILOS III
+    url: http://silos.saude.gov.br/maximo/webclient/login/login.jsp
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: PGMS
+    min_failures: 3 
+
+  - name: RedecorpSus
+    url: http://redecorpsus.saude.gov.br/MS/login
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: suporteredecorpsus@saude.gov.br
+    min_failures: 3
+
+  - name: CADSUS
+    url: https://servicos.saude.gov.br/cadsus/CadsusService/v5r0?wsdl
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: requestPesquisar
+    min_failures: 3 
+
+  - name: PORTAL DO CIDADÃO
+    url: https://portaldocidadao.saude.gov.br/portalcidadao/
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: Portal de Saúde do Cidadão
+    min_failures: 3 
+
+  - name: SPO
+    url: http://aplicacao.saude.gov.br/spo/login.jsf
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: SPO
+    min_failures: 3 
+
+  - name: OUVIDORSUS (ouvprod01)
+    url: http://ouvprod01.saude.gov.br/ouvidor/LoginAtendimento.do
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: OuvidorSus
+    min_failures: 3 
+
+  - name: OUVIDORSUS (ouvprod02)
+    url: http://ouvprod02.saude.gov.br/ouvidor/LoginAtendimento.do
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: OuvidorSus
+    min_failures: 3 
+
+  - name: SISLOG
+    url: http://200.214.130.90:9443/sislog/inicio.jsp
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: SISLOG
+    min_failures: 3 
+
+  - name: SIGESP-SIREF
+    url: http://sigesp-siref.saude.gov.br/siref/configs
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+ #  body:
+    min_failures: 3 
+
+ # - name: SIGESP-SAPMS(Redireciona para PORTAL) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3
+
+ # - name: SIGESP-SLSITUACAO(Redireciona para PORTAL) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3
+
+  - name: SIGESP-ESTAGIÁRIO
+    url: http://sigesp-estagiario.saude.gov.br/inscricao
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: ESTAGIÁRIO
+    min_failures: 3 
+
+ # - name: SIGESP-SIARH(Redireciona para PORTAL) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3
+
+  - name: SISCT
+    url: http://portal2.saude.gov.br/sisct/
+    notify: 
+      - *notify
+#      - email: 
+    status: 200
+    body: SISC&amp;T
+    min_failures: 3
+
+  - name: SIOPS (RJ)
+    url: http://siops.datasus.gov.br/login.php
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: SIOPS
+    min_failures: 3 
+
+  - name: SIGTAP (RJ)
+    url: http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: Acessar a Tabela Unificada
+    min_failures: 3 
+
+  - name: TRANSMISSOR WEB (RJ)
+    url: http://200.214.44.204/transmissor-web/pages/login.jsp
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: Transmissor web
+    min_failures: 3 
+
+  - name: COAGULOPATIASWEB (RJ)
+    url: http://coagulopatiasweb.datasus.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: Coagulopatias
+    min_failures: 3 
+
+  - name: SIPNIWEB (RJ)
+    url: http://sipni.datasus.gov.br/si-pni-web/faces/duvida/duvidaSipni.jsf
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: SI-PNI
+    min_failures: 3 
+
+  - name: SIRIUS (Não estamos monitorando com o dynaTrace)
+    url: http://sirius.saude.gov.br/index.php?r=site/login
+    notify: 
+      - *notify  
+    status: 200
+    body: Sistema de Gestão de Demandas
+    min_failures: 3 
+     
+ # - name: SIGESP-SLSITUACAO(Redireciona para PORTAL) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:     
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3
+
+ # - name: SIPAR-DILIGÊNCIA(Não é possível monitorar, sistema interno) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:     
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3
+
+  - name: SGTES
+    url: http://sgtes.saude.gov.br/gices/public/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: GICES
+    min_failures: 3 
+
+ # - name: SNA LEGISUS(Redireciona pro CAS - SNA AUTENTICA) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:     
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3  
+
+  - name: BVSMS
+    url: http://bvsms.saude.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: Biblioteca
+    min_failures: 3 
+
+  - name: PORTFOLIO DATASUS
+    url: http://aplicacao.saude.gov.br/portfoliodatasus/acessar.html
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: PORTFOLIO
+    min_failures: 3 
+
+  - name: FNS - INDICAÇÃO OBJETO
+    url: http://proposta.saude.gov.br/loginEntidade.jsf
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: PROPOSTAS
+    min_failures: 3 
+
+  - name: FNS - Doc
+    url: http://fnsdoc.saude.gov.br/
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+   # body: PROPOSTAS
+    min_failures: 3
+
+  - name: FNS - BGSICONVWS
+    url: http://bgsiconvws.saude.gov.br/bgsiconvws/
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: BGSiconvWS
+    min_failures: 3
+
+  - name: FNS - SIAFIWS
+    url: http://siafiws.saude.gov.br/siafiws/services/InterfaceWS
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: InterfaceWS
+    min_failures: 3
+
+  - name: FNS - INDICAÇÃO EMENDA
+    url: http://emenda.saude.gov.br/loginIndicacaoEmenda.jsf
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: emendas
+    min_failures: 3 
+
+  - name: FNS - PORTAL
+    url: http://www.fns.saude.gov.br/indexExterno.jsf
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: FNS
+    min_failures: 3 
+
+ # - name: SNA SISAUDSUS(Redireciona pro CAS - SNA AUTENTICA) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3   
+
+  - name: CNRAC
+    url: http://cnrac.datasus.gov.br/cnrac/app/publica.jspx
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: CNRAC
+    min_failures: 3 
+
+  - name: SOMASUS
+    url: http://aplicacao.saude.gov.br/somasus/
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: Desenvolvimento
+    min_failures: 3 
+
+  - name: MAPA DA SAÚDE
+    url: http://mapadasaude.saude.gov.br/mapadasaude/
+    notify: 
+      - *notify
+      - email: isaac.pessoa@xys.com.br
+    status: 200
+    body: Login
+    min_failures: 3 
+
+  - name: SIA (RJ)
+    url: http://sia.datasus.gov.br/principal/index.php
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: SIA
+    min_failures: 3 
+
+ # - name: SISGERF(Sem acesso ao serviço) 
+ #   url: ????
+ #   notify: 
+ #     - *notify
+ #     - email:
+ #   status: 200
+ #   body: ???
+ #   min_failures: 3   
+
+  - name: CNES (RJ)
+    url: http://cnes.datasus.gov.br/
+    notify: 
+      - *notify
+      - email: deivis.raposo@xys.com.br
+    status: 200
+    body: CNES
+    min_failures: 3 
+
+  - name: APPGAL NACIONAL
+    url: https://gal.nacional.sus.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: gal.nacional.sus.gov.br
+    min_failures: 3 
+
+  - name: APPGAL RO
+    url: https://gal.rondonia.sus.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: gal.rondonia.sus.gov.br
+    min_failures: 3 
+    
+  - name: APPGAL RS
+    url: https://gal.riograndedosul.sus.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: gal.riograndedosul.sus.gov.br
+    min_failures: 3 
+
+  - name: APPGAL SP
+    url: https://gal.saopaulo.sus.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: gal.saopaulo.sus.gov.br
+    min_failures: 3 
+    
+    
+
+  - name: APPGAL RN
+    url: https://gal.riograndedonorte.sus.gov.br/
+    notify: 
+      - *notify
+      - email: raphael@xys.com.br
+    status: 200
+    body: gal.riograndedonorte.sus.gov.br
+    min_failures: 3 
+
+  - name: ECAR
+    url: http://ecar.saude.gov.br/
+    notify: 
+      - *notify
+      - email: odilon.alves@xys.com.br
+    status: 200
+    body: e-Car
+    min_failures: 3 
+
+  - name: SDA (Albatross Admin)
+    url: http://sda.saude.gov.br/albatross-admin/
+    notify: 
+      - *notify
+      - email: equipe.apm@xys.com.br
+    status: 200
+    body: Bem-vindo!
+    min_failures: 3 
+
+  - name: SDA (Agendador)
+    url: http://sda.saude.gov.br/agendador/securityRealm/commenceLogin?from=%2Fagendador%2F
+    notify: 
+      - *notify
+#      - email: equipe.apm@xys.com.br
+    status: 200
+    min_failures: 3
+ 
+  - name: SDA (Farmacia Popular)
+    url: http://sda.saude.gov.br/
+    notify:
+      - *notify
+      - email: equipe.apm@xys.com.br
+    status: 200
+#    body: Bem vindo
+    min_failures: 3
+
+
+#-----------------------------------------DCRUM----------------------------------------
+
+  - name: SISREG NACIONAL
+    url: http://sisregiii.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG ALAGOAS
+    url: http://sisregiiial.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG PERNAMBUCO
+    url: http://sisregiiipe.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG NORDESTE
+    url: http://sisregiiinordeste.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG NORTE
+    url: http://sisregiiinorte.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG RIO DE JANEIRO
+    url: http://sisregiiirj.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG SANTA CATARINA
+    url: http://sisregiiisc.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG SÃO PAULO
+    url: http://sisregiiisp.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG CENTRO OESTE
+    url: http://sisregiiicentrooeste.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
+
+  - name: SISREG MANAUS
+    url: http://sisregiii-manaus.saude.gov.br/
+    notify: 
+      - *notify
+      - email: marco.porto@xys.com.br
+    status: 200
+    body: NACIONAL
+    min_failures: 3 
