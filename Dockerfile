@@ -6,7 +6,7 @@ RUN apt-get update && \
 
 ADD docker/install-rbenv.sh /usr/sbin/
 ADD docker/init.sh /usr/sbin/
-ADD docker/start.sh
+ADD docker/start.sh /
 
 RUN chmod 755 /usr/sbin/install-rbenv.sh && \
     chmod 755 /usr/sbin/init.sh && \
@@ -20,7 +20,6 @@ RUN install-rbenv.sh
 USER ruby
 ENV HOME /home/ruby
 ENV PATH /home/ruby/.rbenv/shims:/home/ruby/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ENV TELEGRAM_AP_TOKEN
 ENV LOCALE pt-BR
 ENV TIMEZONE America/Sao_Paulo
 ENV INTERVAL 20
