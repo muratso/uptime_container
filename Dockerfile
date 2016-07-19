@@ -28,8 +28,6 @@ ENV INTERVAL 20
 RUN cd /home/ruby && git clone https://github.com/fnando/uptime_checker.git
 ADD docker/checkers.yml /home/ruby/uptime_checker/
 
-RUN sudo service redis-server start
-
 RUN cd /home/ruby/uptime_checker && bundle install && gem install foreman
 
 CMD ["/bin/bash", "/start.sh"]
