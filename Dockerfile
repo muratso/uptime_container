@@ -22,6 +22,7 @@ ENV HOME /home/ruby
 ENV PATH /home/ruby/.rbenv/shims:/home/ruby/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV LOCALE pt-BR
 ENV TIMEZONE America/Sao_Paulo
+ENV TELEGRAM_API_TOKEN 169652651:AAF01F4pRIRvZayLMtbyjkq3_tdVQDBFEfk
 ENV INTERVAL 20
 
 RUN cd /home/ruby && git clone https://github.com/fnando/uptime_checker.git
