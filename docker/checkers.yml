@@ -1,6 +1,7 @@
 notify: &notify
   - stdout: ~
   - telegram: -105669580
+  - slack: "#bot_disponibilidade"
 
 checkers:
   - name: SISPRENATAL
