@@ -58,7 +58,7 @@ checkers:
     body: HEMOVIDA
     min_failures: 3
 
-  - name: HÓRUS
+  - name: HORUS
     url: http://horus.saude.gov.br/horus/css/geral.css
     notify: 
       - *notify
@@ -67,7 +67,7 @@ checkers:
     body: sistema
     min_failures: 3
 
-  - name: Mais Médicos
+  - name: MAISMEDICOS
     url: http://maismedicos.saude.gov.br/new/web/app.php/maismedicos/rms
     notify: 
       - *notify
@@ -76,7 +76,7 @@ checkers:
     body: Mais Médicos
     min_failures: 3 
 
-  - name: GSM NAT
+  - name: GSM-NAT
     url: http://aplicacao.saude.gov.br/gsm-nat/login.html?0
     notify: 
       - *notify
@@ -121,7 +121,7 @@ checkers:
     body: PERIODICOS
     min_failures: 3 
 
-  - name: SCPA
+  - name: SCPAWS
     url: http://aplicacao.saude.gov.br/datasus-scpa-ws/ScpaServiceImpl?wsdl
     notify: 
       - *notify
@@ -148,7 +148,7 @@ checkers:
     body: SISPACTO
     min_failures: 3 
 
-  - name: PLATAFORMA BRASIL
+  - name: PLATAFORMA BR
     url: http://aplicacao.saude.gov.br/plataformabrasil/login.jsf
     notify: 
       - *notify
@@ -157,7 +157,7 @@ checkers:
   #  body: PLATAFORMA BRASIL
     min_failures: 3 
 
-  - name: SIGESP PORTAL
+  - name: SIGESP
     url: http://sigesp.saude.gov.br/portal\#/login
     notify: 
       - *notify
@@ -184,7 +184,7 @@ checkers:
     body: SIASI
     min_failures: 3 
 
-  - name: FARMÁCIA POPULAR
+  - name: FARMACIA POPULAR
     url: https://200.214.130.55:9443/farmaciapopular/services/ServicoSolicitacaoWS?wsdl
     notify: 
       - *notify
@@ -203,7 +203,7 @@ checkers:
  #   min_failures: 3
  #   
 
-  - name: SILOS III
+  - name: SILOS
     url: http://silos.saude.gov.br/maximo/webclient/login/login.jsp
     notify: 
       - *notify
@@ -212,7 +212,7 @@ checkers:
     body: PGMS
     min_failures: 3 
 
-  - name: RedecorpSus
+  - name: REDECORPSUS
     url: http://redecorpsus.saude.gov.br/MS/login
     notify: 
       - *notify
@@ -221,7 +221,7 @@ checkers:
     body: suporteredecorpsus@saude.gov.br
     min_failures: 3
 
-  - name: CADSUS
+  - name: CADSUS WS
     url: https://servicos.saude.gov.br/cadsus/CadsusService/v5r0?wsdl
     notify: 
       - *notify
@@ -230,7 +230,7 @@ checkers:
     body: requestPesquisar
     min_failures: 3 
 
-  - name: PORTAL DO CIDADÃO
+  - name: PORTAL DO CIDADAO
     url: https://portaldocidadao.saude.gov.br/portalcidadao/
     notify: 
       - *notify
@@ -248,7 +248,7 @@ checkers:
     body: SPO
     min_failures: 3 
 
-  - name: OUVIDORSUS (ouvprod01)
+  - name: OUVIDORSUS
     url: http://ouvprod01.saude.gov.br/ouvidor/LoginAtendimento.do
     notify: 
       - *notify
@@ -257,7 +257,7 @@ checkers:
     body: OuvidorSus
     min_failures: 3 
 
-  - name: OUVIDORSUS (ouvprod02)
+  - name: OUVIDORSUS
     url: http://ouvprod02.saude.gov.br/ouvidor/LoginAtendimento.do
     notify: 
       - *notify
@@ -329,7 +329,7 @@ checkers:
     body: SISC&amp;T
     min_failures: 3
 
-  - name: SIOPS (RJ)
+  - name: SIOPS
     url: http://siops.datasus.gov.br/login.php
     notify: 
       - *notify
@@ -338,7 +338,7 @@ checkers:
     body: SIOPS
     min_failures: 3 
 
-  - name: SIGTAP (RJ)
+  - name: SIGTAP
     url: http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp
     notify: 
       - *notify
@@ -347,7 +347,7 @@ checkers:
     body: Acessar a Tabela Unificada
     min_failures: 3 
 
-  - name: TRANSMISSOR WEB (RJ)
+  - name: TRANSMISSORWEB
     url: http://200.214.44.204/transmissor-web/pages/login.jsp
     notify: 
       - *notify
@@ -356,7 +356,7 @@ checkers:
     body: Transmissor web
     min_failures: 3 
 
-  - name: COAGULOPATIASWEB (RJ)
+  - name: COAGULOPATIAS
     url: http://coagulopatiasweb.datasus.gov.br/
     notify: 
       - *notify
@@ -365,21 +365,13 @@ checkers:
     body: Coagulopatias
     min_failures: 3 
 
-  - name: SIPNIWEB (RJ)
+  - name: SIPNI
     url: http://sipni.datasus.gov.br/si-pni-web/faces/duvida/duvidaSipni.jsf
     notify: 
       - *notify
       - email: raphael@xys.com.br
     status: 200
     body: SI-PNI
-    min_failures: 3 
-
-  - name: SIRIUS (Não estamos monitorando com o dynaTrace)
-    url: http://sirius.saude.gov.br/index.php?r=site/login
-    notify: 
-      - *notify  
-    status: 200
-    body: Sistema de Gestão de Demandas
     min_failures: 3 
      
  # - name: SIGESP-SLSITUACAO(Redireciona para PORTAL) 
@@ -427,7 +419,7 @@ checkers:
     body: Biblioteca
     min_failures: 3 
 
-  - name: PORTFOLIO DATASUS
+  - name: PORTFOLIO
     url: http://aplicacao.saude.gov.br/portfoliodatasus/acessar.html
     notify: 
       - *notify
@@ -436,7 +428,7 @@ checkers:
     body: PORTFOLIO
     min_failures: 3 
 
-  - name: FNS - INDICAÇÃO OBJETO
+  - name: FNS-INDICAÇÃO OBJETO
     url: http://proposta.saude.gov.br/loginEntidade.jsf
     notify: 
       - *notify
@@ -445,7 +437,7 @@ checkers:
     body: PROPOSTAS
     min_failures: 3 
 
-  - name: FNS - Doc
+  - name: FNSDOC
     url: http://fnsdoc.saude.gov.br/
     notify: 
       - *notify
@@ -454,7 +446,7 @@ checkers:
    # body: PROPOSTAS
     min_failures: 3
 
-  - name: FNS - BGSICONVWS
+  - name: BGSICONVWS
     url: http://bgsiconvws.saude.gov.br/bgsiconvws/
     notify: 
       - *notify
@@ -463,7 +455,7 @@ checkers:
     body: BGSiconvWS
     min_failures: 3
 
-  - name: FNS - SIAFIWS
+  - name: SIAFIWS
     url: http://siafiws.saude.gov.br/siafiws/services/InterfaceWS
     notify: 
       - *notify
@@ -472,7 +464,7 @@ checkers:
     body: InterfaceWS
     min_failures: 3
 
-  - name: FNS - INDICAÇÃO EMENDA
+  - name: FNS-INDICAÇÃO EMENDA
     url: http://emenda.saude.gov.br/loginIndicacaoEmenda.jsf
     notify: 
       - *notify
@@ -481,7 +473,7 @@ checkers:
     body: emendas
     min_failures: 3 
 
-  - name: FNS - PORTAL
+  - name: FNS-PORTAL
     url: http://www.fns.saude.gov.br/indexExterno.jsf
     notify: 
       - *notify
@@ -517,7 +509,7 @@ checkers:
     body: Desenvolvimento
     min_failures: 3 
 
-  - name: MAPA DA SAÚDE
+  - name: MAPASAUDE
     url: http://mapadasaude.saude.gov.br/mapadasaude/
     notify: 
       - *notify
@@ -526,7 +518,7 @@ checkers:
     body: Login
     min_failures: 3 
 
-  - name: SIA (RJ)
+  - name: SIA
     url: http://sia.datasus.gov.br/principal/index.php
     notify: 
       - *notify
@@ -544,7 +536,7 @@ checkers:
  #   body: ???
  #   min_failures: 3   
 
-  - name: CNES (RJ)
+  - name: CNES
     url: http://cnes.datasus.gov.br/
     notify: 
       - *notify
@@ -553,7 +545,7 @@ checkers:
     body: CNES
     min_failures: 3 
 
-  - name: APPGAL NACIONAL
+  - name: APPGALNACIONAL
     url: https://gal.nacional.sus.gov.br/
     notify: 
       - *notify
@@ -562,7 +554,7 @@ checkers:
     body: gal.nacional.sus.gov.br
     min_failures: 3 
 
-  - name: APPGAL RO
+  - name: APPGALRO
     url: https://gal.rondonia.sus.gov.br/
     notify: 
       - *notify
@@ -571,7 +563,7 @@ checkers:
     body: gal.rondonia.sus.gov.br
     min_failures: 3 
     
-  - name: APPGAL RS
+  - name: APPGALRS
     url: https://gal.riograndedosul.sus.gov.br/
     notify: 
       - *notify
@@ -580,7 +572,7 @@ checkers:
     body: gal.riograndedosul.sus.gov.br
     min_failures: 3 
 
-  - name: APPGAL SP
+  - name: APPGALSP
     url: https://gal.saopaulo.sus.gov.br/
     notify: 
       - *notify
@@ -591,7 +583,7 @@ checkers:
     
     
 
-  - name: APPGAL RN
+  - name: APPGALRN
     url: https://gal.riograndedonorte.sus.gov.br/
     notify: 
       - *notify
@@ -600,7 +592,7 @@ checkers:
     body: gal.riograndedonorte.sus.gov.br
     min_failures: 3 
 
-  - name: ECAR
+  - name: ECARPROD
     url: http://ecar.saude.gov.br/
     notify: 
       - *notify
