@@ -12,7 +12,7 @@ RUN chmod 755 /usr/sbin/install-rbenv.sh && \
     chmod 755 /usr/sbin/init.sh && \
     chmod 755 /start.sh
 
-RUN echo "America/Sao_Paulo" > /etc/timezone    
+RUN echo "America/Sao_Paulo" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
 RUN useradd -m -d /home/ruby -p ruby ruby && adduser ruby sudo && chsh -s /bin/bash ruby
@@ -26,13 +26,15 @@ ENV PATH /home/ruby/.rbenv/shims:/home/ruby/.rbenv/bin:/usr/local/sbin:/usr/loca
 ENV LOCALE pt-BR
 ENV TIMEZONE America/Sao_Paulo
 ENV TELEGRAM_API_TOKEN 169652651:AAF01F4pRIRvZayLMtbyjkq3_tdVQDBFEfk
-ENV SLACK_API_TOKEN xoxb-64474337718-sEL88iWyT0N74ieuzbZIcbVV
+ENV SLACK_API_TOKEN xoxb-64474337718-cyp8FcdBX9zDoEpYjWfMj3cq
+ENV KANBANTOOL_API_TOKEN CAB1X59858EL
 ENV INTERVAL 20
 
-RUN cd /home/ruby && git clone https://github.com/muratso/uptime_checker.git
+RUN cd /home/ruby && git clone https://github.com/muratso/uptime_checker.git uptime_checker
 ADD docker/checkers.yml /home/ruby/uptime_checker/
+ADD docker/Gemfile /home/ruby/uptime_checker/
 
-RUN cd /home/ruby/uptime_checker && bundle install && gem install foreman
+RUN cd /home/ruby/uptime_checker && bundle update && bundle install && gem install foreman
 
 CMD ["/bin/bash", "/start.sh"]
 EXPOSE 6379
