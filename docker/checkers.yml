@@ -1,7 +1,8 @@
 notify: &notify
   - stdout: ~
+  - kanbantool: {board_id: 244160, workflow_stage_id: 1870778, card_type_id: 2789788, swimlane_id: 572100}
+  - slack: {main_c: '#bot_disponibilidade', secondary_c: '#bot_disponibilidade5m'}
   - telegram: -105669580
-  - slack: "#bot_disponibilidade"
 
 checkers:
   - name: SISPRENATAL
